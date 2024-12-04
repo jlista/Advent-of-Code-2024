@@ -26,7 +26,7 @@ with open("C:/Python/2024/day3input.txt", 'r') as file:
     for instruction in matches:
         if instruction == 'don\'t()':
             do = False
-        if instruction == 'do()':
+        elif instruction == 'do()':
             do = True
         elif do:
             spl = instruction[4:-1].split(',')

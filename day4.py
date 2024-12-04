@@ -11,9 +11,9 @@ def check_xmas(lines, i, j, i_dir, j_dir):
     if j_dir == 1 and j >= len(lines[0]) - 3:
         return False
 
-    return lines[i+i_dir][j+j_dir] == 'M' and \
-    lines[i+i_dir*2][j+j_dir*2] == 'A' and \
-    lines[i+i_dir*3][j+j_dir*3] == 'S'
+    return lines[i+i_dir*1][j+j_dir*1] == 'M' and \
+           lines[i+i_dir*2][j+j_dir*2] == 'A' and \
+           lines[i+i_dir*3][j+j_dir*3] == 'S'
 
 
 with open("C:/Python/2024/day4input.txt", 'r') as file:
