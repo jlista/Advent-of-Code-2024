@@ -99,19 +99,14 @@ with open("C:/Python/2024/day6input.txt", 'r') as file:
 
                 # if we hit an object, turn
                 if lines[next[0]][next[1]] == '#':
-                    dir = dir + 1
-                    if dir == 5:
-                        dir = 0
+                    dir = (dir + 1) % 4
                 # otherwise, move to the next cell
                 else:
                     y = next[0]
                     x = next[1]
                     visited[y][x] += 1
 
-                    if visited[y][x] > max_visits:
-                        max_visits = visited[y][x]
-
-                    if max_visits > 4:
+                    if visited[y][x] > 4:
                         # the maximum number of times any cell can be visited without entailing a cycle is 4
                         # (vertical and horizontal * two directions) so if a cell is visited more than 4 times,
                         # we must be in a cycle
@@ -120,6 +115,5 @@ with open("C:/Python/2024/day6input.txt", 'r') as file:
 
             # end simulation, remove the object we added
             lines[i][j] = '.'
-
 
     print(sumP2)
