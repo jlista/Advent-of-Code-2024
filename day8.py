@@ -1,4 +1,3 @@
-from library import *
 import itertools
 
 # Note: this solution is a complete mess and has some serious logical oversights. I'm just leaving it as is

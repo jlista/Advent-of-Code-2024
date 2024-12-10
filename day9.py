@@ -1,4 +1,3 @@
-from library import *
 import sys
 
 with open("C:/Python/2024/day9input.txt", 'r') as file:
